@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# xrdpサービスを停止する
+sudo systemctl stop xrdp
+
+# サービスが停止するのを待つ
+while sudo systemctl is-active --quiet xrdp; do
+    echo "Waiting for xrdp service to stop."
+    sleep 1
+done
+
 # DEBIAN_FRONTEND を非対話型に設定
 export DEBIAN_FRONTEND=noninteractive
 
