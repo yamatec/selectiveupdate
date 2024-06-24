@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# -s オプションは３箇所に記述しています。本番稼働時はすべて削除
+# sudo apt update
+
 # xrdpサービスを停止する
 sudo systemctl stop xrdp
 
@@ -39,3 +42,5 @@ sudo -E apt install --only-upgrade microsoft-edge-dev -y -q -s
 
 # DEBIAN_FRONTEND を対話型に戻す
 export DEBIAN_FRONTEND=dialog
+
+echo "Update Script Done."
