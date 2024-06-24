@@ -38,7 +38,7 @@ fi
 sudo -E apt install --only-upgrade  google-chrome-stable -y -q -s
 
 # Edge upgrade
-sudo -E apt install --only-upgrade microsoft-edge-dev -y -q -s
+sudo -E apt install --only-upgrade microsoft-edge-stable -y -q -s
 
 # DEBIAN_FRONTEND を対話型に戻す
 export DEBIAN_FRONTEND=dialog
